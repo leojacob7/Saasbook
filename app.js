@@ -50,6 +50,6 @@ app.use('/', (req, res, next) => {
 constructorMethod(app);
 
 const PORT = 3000;
-app.listen(PORT, () => {
-	console.log(`Server is running on port: ${PORT}`);
+app.listen(3001, () => {
+	console.log(`Server is running on port: 2002`);
 });
