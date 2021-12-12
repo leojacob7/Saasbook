@@ -1,0 +1,105 @@
+
+<div
+  class="addProd_Container"
+  id="addProd_Container"
+   {{!-- data-checksignin="{{signInError}}">  --}}
+>
+  <div class="form-container">
+    <form
+      class="row g-3 needs-validation"
+      novalidate
+      id="addProductForm"
+      action="/products/addProduct"
+      method="post"
+    >
+    <h1>Add a Product</h1>
+    <div class="col-md-12 position-relative">
+        <label for="product_Name" class="form-label">Product Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validaterProduct"
+          name="validaterProduct"
+          required
+          placeholder="Please enter product name"
+        />
+        <div class="invalid-feedback">
+          Please provide a valid Product Name (at least two characters, no special characters allowed).
+        </div>
+    </div>
+    <div class="col-md-12 position-relative">
+        <label for="validateDescription" class="form-label">Description</label>
+        <textarea
+            type="text"
+            id="validateDescription"
+            name="validateDescription"
+            required
+            placeholder="Please enter a small description of the product"
+        >
+        </textarea>
+        <div
+          class="invalid-feedback"
+          data-bs-toggle="tooltip"
+          data-bs-placement="right"
+          title="Tooltip on right"
+        >
+          Please provide a description of the product of more than 10 characters.
+        </div>
+    </div>
+    <div class="col-md-12 position-relative">
+        <label for="url" class="form-label">Website URL</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validateURL"
+          name="validateURL"
+          placeholder="Please enter the URL for the webiste"
+        />
+
+        <div
+          class="invalid-feedback"
+          data-bs-toggle="tooltip"
+          data-bs-placement="right"
+          title="Tooltip on right"
+        >
+          Please ensure URL is of the format "http://www.yourwebsite.com"
+        </div>
+    </div>
+    <div class="col-md-12 position-relative">
+        <label for="tags" class="form-label">Tags</label>
+        <input
+          type="text"
+          class="form-control"
+          id="tags"
+          name="tags"
+          required
+          placeholder="Please enter a tag for the product."
+        />
+
+        <div
+          class="invalid-feedback"
+          data-bs-toggle="tooltip"
+          data-bs-placement="right"
+          title="Tooltip on right"
+        >
+          Please ensure that the tag is not empty
+        </div>
+        <div class="col-md-12 position-relative">
+            <label for="file" class="form-label"
+                >Upload a picture of the Product Logo</label
+            >
+            <input type="file" id="file" name="photo" class="form-control" />
+            <div class="invalid-feedback">
+                Files supported: jpg, jpeg, png Max file size: 2MB
+            </div>
+        </div>
+        <button type="submit" name="Submit">Add Product</button>
+    </div>
+</div>
+<script src="/public/js/addProduct.js" />
+<script>
+  if (window.history.replaceState) {
+    window.history.replaceState(null, null, window.location.href)
+  }
+</script>
+
