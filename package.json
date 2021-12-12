@@ -2,6 +2,9 @@
   "name": "cs-546-lab-10",
   "version": "1.0.0",
   "description": "CS 546 lab 10 authentication",
+  "engines": {
+    "node": "14.17.0"
+  },
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
